@@ -135,4 +135,5 @@ def predict():
     return jsonify(asdict(fusion_result))
 
 # This is the entry point for Vercel
+
 app = app
