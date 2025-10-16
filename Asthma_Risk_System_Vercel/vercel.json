@@ -4,5 +4,15 @@
       "src": "api/index.py",
       "use": "@vercel/python"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/index.py"  // <-- CRITICAL: Forces root traffic to the Python function
+    },
+    {
+      "source": "/api/predict",
+      "destination": "/api/index.py"
+    }
   ]
 }
